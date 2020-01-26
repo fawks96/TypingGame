@@ -37,10 +37,10 @@ namespace TypingGame
             {
                 listBox1.Items.Remove(e.KeyCode);
                 listBox1.Refresh();
-                if (timer1.Interval > 400) timer1.Interval -= 10;
-                if (timer1.Interval > 250) timer1.Interval -= 7;
-                if (timer1.Interval > 100) timer1.Interval -= 2;
-                difficultyProgressBar.Value = 800 - timer1.Interval;
+                if (timer1.Interval > 500) timer1.Interval -= 50;
+                if (timer1.Interval > 100 && timer1.Interval <= 500) timer1.Interval -= 20;
+                if (timer1.Interval > 0 && timer1.Interval <= 100) timer1.Interval -= 10;
+                difficultyProgressBar.Value = 1000 - timer1.Interval;
                 stats.Update(true);
             }
             else
